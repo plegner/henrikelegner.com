@@ -90,7 +90,7 @@ grunt.initConfig({
         app: {
             files: [{
                 expand: true,
-                src: '**/*.{gif,png,jpg,webp,ico,json,mp3,mp4,eot,svg,ttf,woff,pdf,txt}',
+                src: ['**/*.{gif,png,jpg,webp,ico,json,mp3,mp4,eot,svg,ttf,woff,pdf,txt}', 'CNAME'],
                 cwd: 'src',
                 dest: 'build'
             }]
