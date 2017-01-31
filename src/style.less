@@ -1,0 +1,212 @@
+html, body {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    font-family: Avenir Next, Nunito, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    background-size: cover;
+    background-position: top right;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    margin: 0 0 0.8em 0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: #f3f4f8;
+    z-index: 200;
+}
+
+.home {
+    display: block; 
+    float: left;
+    color: black;
+    font-weight: 100;
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-top: -10px;
+    color: rgba(0,0,0,0.3);
+    font-weight: 400;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    float: right
+}
+
+nav a {
+    float: left;
+    color: #666;
+    margin: 30px 15px;
+    transition: color .2s;
+    position: relative;
+    text-decoration: none;
+    display: block;
+
+    &:hover, &:focus { color: #333; }
+}
+
+nav a:after {
+    content: " ";
+    left: 0;
+    background: #666;
+    display: block;
+    height: 1px;
+    position: absolute;
+    bottom: -2px;
+    width: 0;
+    transition: width .2s;
+}
+nav a:hover:after, nav a:focus:after { width: 100% }
+
+@media (max-width: 800px) {
+    nav {
+        width: 40px;
+        height: 40px;
+        background: white;
+        margin: 20px 0;
+        position: relative;
+        background: url('data:image/svg+xml;utf8,<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>') center no-repeat;
+        background-size: 24px 24px;
+    }
+
+    .nav-box {
+        background: white;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        padding: 6px 0;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+
+        transition: opacity .2s, transform .2s;
+        transition-delay: .3s;
+        transform-origin: top right;
+        opacity: 0;
+        transform: scale(0.5);
+        pointer-events: none;
+    }
+
+    nav:hover .nav-box {
+        pointer-events: all;
+        transform: none;
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    nav a {
+        float: none;
+        margin: 0;
+        padding: 6px 18px;
+    }
+}
+
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -12px;
+}
+
+.row > * { margin: 12px; width: 320px; }
+.row .grow { flex-grow: 1; }
+
+
+.wrap, #content {
+    width: calc(~"100% - 36px");
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+#content {
+    margin-top: 160px;
+    margin-bottom: 240px;
+}
+
+
+
+h1 {
+    font-weight: 400;
+    margin: 0 0 44px;
+    font-size: 36px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    color: #999;
+    font-size: 1.6em;
+    margin: 2em 0 1em;
+    &:first-child { margin-top: 0; }
+}
+
+
+
+
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    background: black;
+    margin-bottom: .5em;
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+.event {
+    max-width: 640px;
+    margin: 0 auto 1em;
+}
+
+.event h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 6px 0;
+}
+
+.event p.meta {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.event p {
+    margin: 0 0 12px;
+    &:last-child { margin: 0; }
+}
+
+
+

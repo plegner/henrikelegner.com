@@ -1,0 +1,26 @@
+{
+  "name": "henrike-legner",
+  "version": "0.0.1",
+  "author": "Philipp Legner",
+  "scripts": {
+    "start": "grunt build && cd build && python -m SimpleHTTPServer 8081",
+    "build": "grunt"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.4",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-es2015-loose": "^7.0.0",
+    "grunt": "^1.0.1",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-babel": "^6.0.0",
+    "grunt-build-control": "^0.7.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-jade": "^1.0.0",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-pug": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "matchdep": "^1.0.1"
+  }
+}
