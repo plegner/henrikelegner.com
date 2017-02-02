@@ -26,7 +26,7 @@ html
     meta(name="twitter:card", content="summary_large_image")
 
     link(href="https://fonts.googleapis.com/css?family=Nunito:200,400,400i700" rel="stylesheet")
-    link(href='/style.css', rel='stylesheet')
+    link(href='/style.css?v=1', rel='stylesheet')
 
   body
 
@@ -35,7 +35,7 @@ html
         a.home(href="/") Henrike Legner
           .subtitle Soprano
         nav
-          a.nav-box-icon
+          .nav-box-icon
           .nav-box
             a(href="/bio") Biography
             a(href="/calendar") Calendar
@@ -45,3 +45,26 @@ html
 
     #content
       block content    
+
+    script.
+      var NAV_OPEN = false;
+      var navClass = document.querySelector('nav').classList;
+      document.querySelector('.nav-box-icon').addEventListener('touchstart', function(e) {
+        console.log('a', NAV_OPEN, e.handled);
+        if (NAV_OPEN) { navClass.remove('open'); } else { navClass.add('open'); } 
+        NAV_OPEN = !NAV_OPEN;
+        e.handled = true;
+      });
+      document.querySelector('.nav-box').addEventListener('touchstart', function(e) {
+        e.handled = true;
+      });
+      document.addEventListener('touchstart', function(e) {
+        console.log('c', NAV_OPEN, e.handled);
+        if (!e.handled && NAV_OPEN) {
+          navClass.remove('open');
+          NAV_OPEN = false;
+        }
+      });
+
+
+
