@@ -3,12 +3,29 @@ block vars
 doctype html
 html
   head
-    meta(http-equiv="content-type" content="text/html; charset=utf-8")
+    meta(charset="utf-8")
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+
     title Henrike Legner • Soprano
-    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="description", content="Henrike is a Soprano, currently studying at Trinity Laban Conservatoire of Music and Dance in London.")
+
+    meta(name="google-site-verification" content="LfZbwC0JLj1_MQKhdEnLB2dAkIz8BYNT10fPp8en43Y")
+
+    meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(http-equiv="cleartype", content="on")
+    meta(name="theme-color", content="#e3e7f5")
+
+    link(rel="icon", sizes="64x64", href="/favicon.png")
+    link(rel="icon", sizes="192x192", href="/favicon-192.png")
+    link(rel="apple-touch-icon", href="/favicon-192.png")
+
+    meta(property="og:title", content="Henrike Legner • Soprano")
+    meta(property="og:description", content="Henrike is a Soprano, currently studying at Trinity Laban Conservatoire of Music and Dance in London.")
+    meta(property="og:image", content="/gallery/dark-1.jpg")
+    meta(property="og:type", content="music:creator")
+    meta(name="twitter:card", content="summary_large_image")
 
     link(href="https://fonts.googleapis.com/css?family=Nunito:200,400,400i700" rel="stylesheet")
-
     link(href='/style.css', rel='stylesheet')
 
   body
@@ -18,12 +35,13 @@ html
         a.home(href="/") Henrike Legner
           .subtitle Soprano
         nav
+          a.nav-box-icon
           .nav-box
-            a(href="/bio.html") Biography
-            a(href="/calendar.html") Calendar
-            a(href="/recordings.html") Recordings
-            a(href="/gallery.html") Gallery
-            a(href="/contact.html") Contact
+            a(href="/bio") Biography
+            a(href="/calendar") Calendar
+            a(href="/recordings") Recordings
+            a(href="/gallery") Gallery
+            a(href="/contact") Contact
 
     #content
       block content    

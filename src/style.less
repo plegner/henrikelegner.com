@@ -7,9 +7,15 @@ html, body {
 }
 
 html {
+    background-position: right 25% top;
+    background-repeat: no-repeat;
     background-size: cover;
-    background-position: top right;
 }
+
+@media screen and (min-aspect-ratio: 1/2) { html { background-position: right 20% top; } }
+@media screen and (min-aspect-ratio: 1/1) { html { background-position: right top; } }
+@media screen and (min-aspect-ratio: 4/3) { html { background-position: right top 50%; } }
+@media screen and (min-aspect-ratio: 2/1) { html { background-position: right top 30%; } }
 
 a {
     text-decoration: none;
@@ -24,7 +30,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    background: #f3f4f8;
+    background: #e3e7f5;
     z-index: 200;
 }
 
@@ -80,13 +86,19 @@ nav a:after {
 }
 nav a:hover:after, nav a:focus:after { width: 100% }
 
+.nav-box-icon { display: none; }
+
 @media (max-width: 800px) {
     nav {
-        width: 40px;
-        height: 40px;
-        background: white;
-        margin: 20px 0;
+        margin: 8px -16px;
         position: relative;
+    }
+
+    .nav-box-icon {
+        display: block;
+        width: 60px;
+        height: 60px;
+        padding: 0;
         background: url('data:image/svg+xml;utf8,<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>') center no-repeat;
         background-size: 24px 24px;
     }
@@ -94,8 +106,8 @@ nav a:hover:after, nav a:focus:after { width: 100% }
     .nav-box {
         background: white;
         position: absolute;
-        top: 40px;
-        right: 0;
+        top: 54px;
+        right: 8px;
         padding: 6px 0;
         box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 
@@ -119,6 +131,8 @@ nav a:hover:after, nav a:focus:after { width: 100% }
         margin: 0;
         padding: 6px 18px;
     }
+
+    nav a:after { display: none; }
 }
 
 
@@ -131,7 +145,9 @@ nav a:hover:after, nav a:focus:after { width: 100% }
 }
 
 .row > * { margin: 12px; width: 320px; }
+.row > * p:last-child { margin: 0; }
 .row .grow { flex-grow: 1; }
+
 
 
 .wrap, #content {
@@ -165,8 +181,6 @@ h2 {
 
 
 
-
-
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -188,8 +202,8 @@ h2 {
 
 
 .event {
-    max-width: 640px;
-    margin: 0 auto 1em;
+    max-width: 620px;
+    margin: 0 auto 24px;
 }
 
 .event h3 {
@@ -204,9 +218,52 @@ h2 {
 }
 
 .event p {
-    margin: 0 0 12px;
+    margin: 0 0 8px;
     &:last-child { margin: 0; }
 }
 
 
 
+form {
+    max-width: 400px;
+    margin: 24px auto;
+}
+
+label {
+    font-width: bold;
+    display: block;
+    margin: 0 0 24px 0;
+    color: #666;
+}
+
+input, textarea {
+    font-family: inherit;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 6px 12px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    &:hover, &:focus { border-color: #aaa; }
+}
+
+button {
+    -webkit-appearance: none;
+    padding: 8px 20px;
+    background: #566cc3;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    &:hover, &:focus { background: #3e4b82; }
+}
+
+p a {
+    color: #566cc3;
+    &:hover { text-decoration: underline; }
+}
