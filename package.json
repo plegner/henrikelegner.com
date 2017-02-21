@@ -4,7 +4,8 @@
   "author": "Philipp Legner",
   "scripts": {
     "start": "grunt build && cd build && python -m SimpleHTTPServer 8081",
-    "build": "grunt"
+    "build": "grunt",
+    "deploy": "grunt deploy"
   },
   "devDependencies": {
     "babel-core": "^6.7.4",
