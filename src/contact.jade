@@ -8,23 +8,11 @@ block content
 
   p(style="text-align: center") For enquiries, please email Henrike at #[a(href="mailto:henrike@legner.com") henrike@legner.com], or fill in the form below:
 
-  form(action="https://submit.jotformeu.com/submit/70301029903344/", method="post")
-
-    input(type="hidden" name="formID" value="70301029903344")
-    input(type="hidden" name="website" value="")
-    input(type="hidden" id="simple_spc" name="simple_spc" value="70301029903344-70301029903344")
-    input(type="hidden" name="event_id" value="1485849081761_70301029903344_4GYlFIy")
-
-    label
-      | Name
-      input(name="q6_name", required)
-
-    label
-      | E-mail
-      input(type="email", name="q4_email4", required)
-    
-    label
-      | Message
-      textarea(name="q5_message" rows="6" required)
-
+  form(action="https://mathigon.org/form?id=henrike" method="post")
+    label Name
+      input(type="text" name="name" required autocomplete="name")
+    label E-mail
+      input(type="email" name="email" required autocomplete="email")
+    label Message
+      textarea(name="text" rows="6" required)
     button(type="submit") Submit
