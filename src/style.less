@@ -164,6 +164,29 @@ nav a:hover:after, nav a:focus:after { width: 100% }
     margin-bottom: 240px;
 }
 
+p.quote {
+    position: absolute;
+    font-size: 22px;
+    max-width: 421px;
+    font-style: italic;
+    left: 40px;
+    bottom: 40px;
+    text-shadow: 0 2px 5px white, 0 1px 2px white, 0 0 20px white;
+    margin: 0;
+    a { display: block; font-size: 80%; width: fit-content; margin-top: 6px; }
+
+    @media (max-width: 640px) {
+        text-shadow: none;
+        background: fade(white, 60%);
+        backdrop-filter: blur(4px);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: none;
+        padding: 18px 24px;
+        font-size: 18px;
+    }
+}
 
 
 h1 {
