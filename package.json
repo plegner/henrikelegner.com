@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "author": "Philipp Legner",
   "scripts": {
-    "start": "grunt build && cd build && python -m SimpleHTTPServer 8081",
+    "start": "grunt build && cd build && python3 -m http.server 8081",
     "build": "grunt",
     "deploy": "grunt deploy"
   },
