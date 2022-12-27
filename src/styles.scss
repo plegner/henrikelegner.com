@@ -78,7 +78,7 @@ header {
       a { padding: 6px 30px; }
     }
 
-    nav:focus-within .nav-body {
+    nav:focus-within .nav-body, nav:hover .nav-body {
       pointer-events: all;
       transform: none;
       opacity: 1;
