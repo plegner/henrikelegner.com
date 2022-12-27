@@ -1,0 +1,33 @@
+extends _layout.pug
+
+block vars
+  - var title = 'Henrike Legner – Gallery'
+  - var mainClass = 'wide'
+
+block content
+  h1 Gallery
+
+  h2 Die Gänsemagd
+  .row
+    for img in ['gans-11', 'gans-9', 'gans-1', 'gans-2', 'gans-3', 'gans-5']
+      .grow: img(src=`./gallery/${img}.jpg`)
+
+  h2 Ariodante and Operetten Soiree
+  .row
+    for img in ['ariodante-1', 'ariodante-2', 'ariodante-3', 'operette-1', 'operette-2', 'operette-3']
+      .grow: img(src=`./gallery/${img}.jpg`)
+
+  h2 L’Incoronazione di Poppea
+  .row
+    for img in ['poppea-1', 'poppea-2', 'poppea-3', 'poppea-4']
+      .grow: img(src=`./gallery/${img}.jpg`)
+
+  h2 Others
+  .row
+    for img in ['henrike-1', 'henrike-2', 'munich-1', 'munich-2', 'green-3', 'green-4', 'dark-1', 'dark-2']
+      .grow: img(src=`./gallery/${img}.jpg`)
+    .grow(style="width: 660px"): img(src="./gallery/eye-1.jpg")
+    //- .grow(style="width: 660px"): img(src="./gallery/laurea.jpg")
+    .grow: img(src="./gallery/black-1.jpg")
+    .grow: img(src="./gallery/black-2.jpg")
+    .grow: img(src="./gallery/ballet.jpg")

@@ -1,0 +1,252 @@
+$bg: #93c0d5;
+$fg: #2d5a79;
+
+html, body {
+  background: $bg;
+  padding: 0;
+  margin: 0;
+  font-family: 'PT Sans', Helvetica, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  @media screen and (max-width: 720px) { font-size: 16px; }
+}
+
+body { max-width: 1800px; margin: 0 auto; }
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; border-radius: 4px; }
+
+// Header ------------------------------------------------------------------------
+
+header {
+  margin: 0 auto;
+  color: $fg;
+  border-bottom: 2px solid rgba($fg, 50%);
+  display: flex;
+  max-width: 840px;
+  padding: 0 40px;
+  font-size: 20px;
+  justify-content: center;
+  margin-bottom: -52px;
+  z-index: 100;
+  position: sticky;
+  top: 0;
+  background: rgba($bg, 60%);
+  backdrop-filter: blur(20px);
+  &.home { background: transparent; }
+
+  a { display: block; padding: 10px 16px; transition: background .2s; }
+  a:hover, a:focus { background: rgba($fg, 20%); }
+  svg { margin: -9px 2px; }
+
+  .nav-dropdown { display: none; }
+  .nav-body { display: flex; }
+
+  @media (max-width: 680px) {
+    padding: 0;
+    justify-content: space-between;
+    a { padding: 10px 24px; }
+
+    .nav-dropdown {
+      -webkit-appearance: none;
+      border: none;
+      cursor: pointer;
+      display: block;
+      width: 50px;
+      height: 50px;
+      padding: 0;
+      background: url('data:image/svg+xml;utf8,<svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>') center no-repeat;
+      background-size: 24px 24px;
+      transition: background .2s;
+      &:hover, &:focus { background-color: rgba($fg, 20%); }
+    }
+
+    .nav-body {
+      display: block;
+      margin: 0;
+      background: white;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      padding: 6px 0;
+      box-shadow: 0 4px 12px rgba(black, 20%);
+      transition: opacity .2s, transform .2s;
+      transform-origin: top right;
+      opacity: 0;
+      transform: scale(0.5);
+      pointer-events: none;
+      a { padding: 6px 30px; }
+    }
+
+    nav:focus-within .nav-body {
+      pointer-events: all;
+      transform: none;
+      opacity: 1;
+    }
+  }
+}
+
+// Home ------------------------------------------------------------------------
+
+.hero {
+  $minHeight: 540px;
+  $maxHeight: 1200px;
+  height: 100vh;
+  position: relative;
+  min-height: $minHeight;
+  max-height: min($maxHeight, 80vw);
+  color: $fg;
+
+  .image {
+    background: url(./images/hero.jpg) no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .text {
+    position: absolute;
+    left: calc(min(max(100vh, $minHeight), $maxHeight, 80vw) * 0.67);
+    right: 0;
+    top: 150px;
+    bottom: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-wrap { width: fit-content; }
+  h1 { text-transform: uppercase; margin: 0; font-size: 3.3em; line-height: 1; }
+  h1 img { display: inline-block; }
+  .subtitle { display: block; font-size: 50%; opacity: 0.5; margin-top: 0.5em; }
+  p.quote { margin: 3.3em 0 0 0; font-style: italic; font-size: 1.2em; text-indent: -6px; }
+
+  a { display: block; }
+  a:hover, a:focus { text-decoration: underline; }
+
+  @media screen and (max-width: 900px) { font-size: 16px; }
+  @media screen and (max-width: 720px) { font-size: 14px; }
+
+  @media screen and (max-width: 660px) {
+    margin-top: 52px;
+    font-size: 18px;
+    height: auto;
+    max-height: none;
+    .image { position: static; height: 0; padding-bottom: 100%; background-position: 0 15%; background-size: cover; }
+    .text { position: static; display: block; margin: 1.3em 0 3em; }
+    .text-wrap { width: auto; text-align: center; }
+    p.quote { margin-top: 2em; }
+  }
+  @media screen and (max-width: 400px) { font-size: 16px }
+}
+
+// Content Pages ---------------------------------------------------------------
+
+main {
+  padding: 0 20px;
+  margin: 7.5rem auto 12rem;
+  box-sizing: border-box;
+  max-width: 720px;
+  &.wide { max-width: 880px; }
+
+  h1 { font-size: 2.5rem; text-align: center; margin: 0 0 1em 0; color: $fg; }
+  h2 { font-size: 1.5rem; border-bottom: 2px solid rgba($fg, 50%); padding-bottom: 0.3em; margin: 1.6em 0 0.8em; }
+
+  p { margin: 0 0 .8em 0; color: mix($bg, black, 30%); }
+  p strong { color: black; }
+  p.caption { font-size: 14px; font-style: italic; margin-top: 1em; }
+
+  p a { color: #0071bd; }
+  p a:focus, p a:hover { text-decoration: underline; }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -12px;
+}
+
+.row > * { margin: 12px; width: 280px; }
+.row .grow { flex-grow: 1; }
+.row.right { flex-direction: row-reverse; }
+.row img { display: block; margin: 0 auto; }
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  p { flex: 340px 1 1; }
+}
+
+.event {
+  clear: both;
+  min-height: 80px;
+  margin-bottom: 1.5em;
+  padding-left: 100px;
+  font-size: 0.9rem;
+  img { width: 80px; float: left; margin-right: 20px; margin-left: -100px; }
+  h3 { line-height: 1.2; font-size: 1.2rem; margin: 0 0 5px 0; }
+  p { margin: 0; font-style: italic; }
+  .meta { margin-bottom: 5px; font-style: normal; }
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  background: black;
+  margin-bottom: .5em;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Contact Form ----------------------------------------------------------------
+
+form {
+  max-width: 400px;
+  margin: 24px auto;
+
+  label {
+    font-weight: bold;
+    display: block;
+    margin: 0 0 24px 0;
+    color: $fg;
+  }
+
+  input, textarea {
+    font-family: inherit;
+    display: block;
+    border: 2px solid mix($fg, $bg);
+    border-radius: 5px;
+    padding: 6px 12px;
+    font-size: 16px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+    resize: vertical;
+    &:hover, &:focus { border-color: $fg; }
+  }
+
+  button {
+    -webkit-appearance: none;
+    padding: 8px 20px;
+    background: $fg;
+    border-radius: 3px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    &:hover, &:focus { background: darken($fg, 20%); }
+  }
+}

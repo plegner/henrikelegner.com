@@ -1,7 +1,7 @@
-extends _layout.jade
+extends _layout.pug
 
 block vars
-  - var title = 'Henrike Legner • Recordings'
+  - var title = 'Henrike Legner – Contact'
 
 block content
   h1 Contact
@@ -11,7 +11,7 @@ block content
   form(action="https://mathigon.org/form?id=henrike" method="post")
     label Name
       input(type="text" name="name" required autocomplete="name")
-    label E-mail
+    label Email
       input(type="email" name="email" required autocomplete="email")
     label Message
       textarea(name="text" rows="6" required)

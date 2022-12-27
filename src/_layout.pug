@@ -1,0 +1,47 @@
+block vars
+- var description = "Henrike is a German Soprano, currently studying at at the Bavarian Theatre Academy August Everding in Munich."
+
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    title= title
+    meta(name="description" content=description)
+
+    meta(name="google-site-verification" content="LfZbwC0JLj1_MQKhdEnLB2dAkIz8BYNT10fPp8en43Y")
+    meta(name="viewport" content="width=device-width, initial-scale=1, user-scalable=no")
+    meta(http-equiv="cleartype" content="on")
+    meta(name="theme-color" content="#e3e7f5")
+
+    link(rel="icon" sizes="64x64" href="./favicon.png")
+    link(rel="icon" sizes="192x192" href="./favicon-192.png")
+    link(rel="apple-touch-icon" href="./favicon-192.png")
+
+    meta(property="og:title" content=title)
+    meta(property="og:description" content=description)
+    meta(property="og:image" content="./thumbnail.jpg")
+    meta(property="og:type" content="music:creator")
+    meta(name="twitter:card" content="summary_large_image")
+
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+    link(href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet")
+    link(href="./styles.scss" rel="stylesheet")
+
+  body
+    header(class=(isHome ? 'home' : ''))
+      a(href="/" title="Home"): include ./svg/mono.svg
+      nav
+        button.nav-dropdown
+        .nav-body
+          a(href="/bio") Biography
+          a(href="/calendar") Calendar
+          a(href="/repertoire") Repertoire
+          //- a(href="/recordings") Recordings
+          a(href="/gallery") Gallery
+          a(href="/contact") Contact
+
+    block hero
+    if !isHome
+      main(class=mainClass)
+        block content

@@ -1,0 +1,18 @@
+extends _layout.pug
+
+block vars
+  - var isHome = true
+  - var title = 'Henrike Legner – Soprano'
+
+block hero
+  .hero
+    .image
+    .text: .text-wrap
+      h1
+        img(alt="Henrike" src="./svg/henrike.svg" style="width:3.87em")
+        br
+        img(alt="Legner" src="./svg/legner.svg" style="width:3.43em")
+        br
+        span.subtitle: img(alt="Soprano" src="./svg/soprano.svg" style="width:4.81em")
+      p.quote: a(href="https://www.sueddeutsche.de/muenchen/bayerische-theaterakademie-musikhochschule-muenchen-haendel-ariodante-kritik-1.5570915" target="_blank")
+        | “Henrike Legner ist mit ihren#[br]Koloraturen eine Verheißung fürs#[br]Barockfach” – Süddeutsche Zeitung
