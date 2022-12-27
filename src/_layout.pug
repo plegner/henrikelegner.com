@@ -32,7 +32,7 @@ html
     header(class=(isHome ? 'home' : ''))
       a(href="/" title="Home"): include ./svg/mono.svg
       nav
-        button.nav-dropdown(title="Menu")
+        .nav-dropdown(title="Menu" tabindex="0")
         .nav-body
           a(href="/bio") Biography
           a(href="/calendar") Calendar
