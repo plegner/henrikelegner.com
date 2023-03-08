@@ -146,7 +146,7 @@ main {
   margin: 7.5rem auto 12rem;
   box-sizing: border-box;
   max-width: 720px;
-  &.wide { max-width: 880px; }
+  &.wide { max-width: 880px; position: relative; }
 
   h1 { font-size: 2.5rem; text-align: center; margin: 0 0 1em 0; color: $fg; }
   h2 { font-size: 1.5rem; border-bottom: 2px solid rgba($fg, 50%); padding-bottom: 0.3em; margin: 1.6em 0 0.8em; }
@@ -157,6 +157,11 @@ main {
 
   p a { color: #0071bd; }
   p a:focus, p a:hover { text-decoration: underline; }
+}
+
+.flag {
+  position: absolute; top: 12px; right: 20px; display: block;
+  img { display: block; }
 }
 
 .row {

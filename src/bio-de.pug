@@ -1,0 +1,30 @@
+extends _layout.pug
+
+block vars
+  - var title = 'Henrike Legner – Biografie'
+  - var mainClass = 'wide'
+
+block content
+  h1 Biografie
+  a(href="/bio-de" title="English Version" class="flag"): img(src="./images/gb.png" alt="" width=36 height=36)
+  .row.right
+    .grow.bio(style="line-height:1.6" lang="de")
+      :markdown-it
+        Henrike Legner ist eine deutsche Sopranistin und lebt in München, wo sie an der **Theaterakademie August Everding** und in der Gesangsklasse von KS Prof. **Christiane Iven** studiert.
+
+        Seit 2021 hat Henrike in folgenden Produktionen der Theaterakademie mitgewirkt: „Ariodante“ von Händel (*Ginevra*), „Die Gänsemagd“ von Iris ter Shiphorst (*Die Kammerjungfrau*) und „Il Giasone“ von Cavalli (*Sole und Alinde*).
+
+        Die ersten drei Jahre ihres Bachelorstudiums absolvierte Henrike am Trinity Laban Conservatoire of Music and Dance in London und gewann 2016 den Collingwood Finalist Prize beim Kathleen Ferrier Society Bursary für junge Sängerinnen und Sänger. Nach einem Erasmus-Austausch blieb sie in Padua, Italien, und schloss 2019 ihr Studium am Conservatorio di Musica Cesare Pollini mit Auszeichnung ab. Darüber hinaus nahm sie an Meisterkursen u.a. bei Emma Kirkby, KS Angelika Kirchschlager, KS Brigitte Fassbaender und Joan Patenaude-Yarnel teil.
+
+        Henrike wurde von der **Stiftung arteMusica** und der **Richard-Wagner-Stipendienstiftung** München (2023) gefördert. Zu ihren weiteren Interessen gehören Ballett und Modern Dance. Sie spricht außerdem fließend Deutsch, Englisch und Italienisch.
+
+        Als Solistin trat Henrike mit Orchestern wie dem Niederrheinischen Kammerorchester, Ensemble des WDR Funkhausorchesters, Burgate Singers and Sinfonia u.a. auf. Zu ihrem Konzertrepertoire gehören *Exsultate jubilate* (Mozart), *Jauchzet Gott in allen Landen* (Bach), *Messiah* (Händel), *Johannespassion* (Bach), *Nulla in mundo pax sincera* (Vivaldi), *Gloria* (Händel) und *Stabat mater* (Szymanowski).
+
+        Henrikes Interesse gilt auch dem Kunstlied. Wichtige Inspirationen erhielt sie hierfür bei der *Udo Reinemann International Masterclass for Duos* am La Monnaie in Brüssel.
+
+        2023 wird sie im März an der Theaterakademie in der Rolle der *Nerea* in „Achill unter den Mädchen“ von Wolfgang-Andreas Schultz mit dem **Münchner Rundfunkorchester** im Prinzregententheater zu erleben sein und im Juni in der Herzogsburg in Dingolfing mit dem Pianisten **Gerold Huber** einen Liederabend mit Werken von Strauss, Debussy, Schubert und Mendelssohn gestalten.
+
+    div
+      div(style="position: sticky; top: 90px")
+        img(src="./images/bio.jpg" width=280)
+        p.caption Photo by Adrienne Meister. Please do not use this text for concert programs, and #[a(href="mailto:henrike@legner.com") get in touch] for a shorter biography.
