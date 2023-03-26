@@ -117,11 +117,15 @@ header {
   .text-wrap { width: fit-content; }
   h1 { text-transform: uppercase; margin: 0; font-size: 3.3em; line-height: 1; }
   h1 img { display: inline-block; }
-  .subtitle { display: block; font-size: 50%; opacity: 0.5; margin-top: 0.5em; }
-  p.quote { margin: 3.3em 0 0 0; font-style: italic; font-size: 1.2em; text-indent: -6px; }
+  .subtitle { display: block; font-size: 50%; opacity: 0.5; margin: 0.5em 0 3em; }
 
-  a { display: block; }
-  a:hover, a:focus { text-decoration: underline; }
+  p.quote {
+    line-height: 1.4;
+    margin: 1em -14px 0; font-style: italic; font-size: 1.2em; text-indent: -6px; max-width: 325px;
+    span { font-size: 70%; display: block; text-indent: 0; margin-top: 0.2em; }
+    a { padding: 6px 14px; border-radius: 6px; display: block; transition: background .2s; }
+    a:hover, a:focus { text-decoration: none; background: rgba($fg, 25%); }
+  }
 
   @media screen and (max-width: 900px) { font-size: 16px; }
   @media screen and (max-width: 720px) { font-size: 14px; }
@@ -134,7 +138,8 @@ header {
     .image { position: static; height: 0; padding-bottom: 100%; background-position: 0 15%; background-size: cover; }
     .text { position: static; display: block; margin: 1.3em 0 3em; }
     .text-wrap { width: auto; text-align: center; }
-    p.quote { margin-top: 2em; }
+    .subtitle { margin-bottom: 2em; }
+    p.quote { margin: 1em 20px; max-width: none; }
   }
   @media screen and (max-width: 400px) { font-size: 16px }
 }
