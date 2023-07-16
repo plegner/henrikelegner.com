@@ -9,7 +9,7 @@ block content
 
   h2 Die Gänsemagd
   .row
-    for img in ['gans-11', 'gans-9', 'gans-1', 'gans-2', 'gans-3', 'gans-5']
+    for img in ['gans-11', 'gans-9', 'gans-1', 'gans-2', 'gans-3', 'gans-5', 'gans-7', 'gans-10', 'gans-6', 'gans-8', 'gans-4', 'gans-12']
       .grow: img(src=`./gallery/${img}.jpg`)
 
   h2 Ariodante and Operetten Soiree
@@ -24,10 +24,11 @@ block content
 
   h2 Others
   .row
-    for img in ['henrike-1', 'henrike-2', 'munich-1', 'munich-2', 'green-3', 'green-4', 'dark-1', 'dark-2']
+    //- 'green-3', 'green-4', 'dark-1', 'dark-2'
+    for img in ['ascona-1', 'ascona-2', 'henrike-1', 'henrike-2', 'henrike-5', 'henrike-6', 'munich-1', 'munich-2']
       .grow: img(src=`./gallery/${img}.jpg`)
     .grow(style="width: 660px"): img(src="./gallery/eye-1.jpg")
     //- .grow(style="width: 660px"): img(src="./gallery/laurea.jpg")
-    .grow: img(src="./gallery/black-1.jpg")
-    .grow: img(src="./gallery/black-2.jpg")
-    .grow: img(src="./gallery/ballet.jpg")
+    //- .grow: img(src="./gallery/black-1.jpg")
+    //- .grow: img(src="./gallery/black-2.jpg")
+    //- .grow: img(src="./gallery/ballet.jpg")
