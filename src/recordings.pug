@@ -6,17 +6,22 @@ block vars
 block content
   h1 Recordings
 
-  //- .video-container
-    iframe(src="https://www.youtube.com/embed/fFCSF3b-8ns", frameborder="0", allowfullscreen)
-  //- p(style="margin-bottom: 24px") #[strong Tornami a vagheggiar (Alcina)]#[br]George Frideric Handel#[br]September 2018
+  .video-container
+    iframe(src="https://www.youtube.com/embed/aaUvIMTPDpw", frameborder="0", allowfullscreen)
+  p(style="margin-bottom: 24px") #[strong Guitare], WD 79, Georges Bizet#[br]#[em Henrike Legner (soprano), Hiroko Utsumi (piano)]#[br]#[em Live recording of the final rehearsal for the Klassik Sommerfestival Ettal, August 2023]
 
   .row
-    .grow
+    //- .grow
+      .video-container
+        iframe(src="https://www.youtube.com/embed/fFCSF3b-8ns", frameborder="0", allowfullscreen)
+      p(style="margin-bottom: 24px") #[strong Tornami a vagheggiar (Alcina)]#[br]George Frideric Handel#[br]September 2018
+
+    //- .grow
       .video-container
         iframe(src="https://www.youtube.com/embed/xf6nC2351aE", frameborder="0", allowfullscreen)
       p #[strong Chacun le sait – Marie]#[br]La Fille du régiment#[br]Gaetano Donizetti#[br]May 2022
 
-    .grow
+    //- .grow
       .video-container
         iframe(src="https://www.youtube.com/embed/oNsZNhhVikE", frameborder="0", allowfullscreen)
       p #[strong Exsultate jubilate]#[br]Wolfgang Amadeus Mozart#[br]January 2021
@@ -36,7 +41,7 @@ block content
         iframe(src="https://www.youtube.com/embed/i7biIWiPP2Q", frameborder="0", allowfullscreen)
       p #[strong Da tempeste il legno infranto (Giulio Cesare)]#[br]George Frideric Handel#[br]May 2020
 
-    .grow
+    //- .grow
       .video-container
         iframe(src="https://www.youtube.com/embed/Qvai_3qIPoQ", frameborder="0", allowfullscreen)
       p #[strong O sleep, why dost thou leave me]#[br]George Frideric Handel#[br]April 2020
@@ -86,7 +91,7 @@ block content
         iframe(src="https://www.youtube.com/embed/WyJ3R0CS2fc", frameborder="0", allowfullscreen)
       p #[strong Nulla in Mundo Pax Sincera]#[br]Antonio Vivaldi#[br]October 2013
 
-    .grow(style="max-width:448px")
+    //- .grow(style="max-width:448px")
       .video-container
         iframe(src="https://www.youtube.com/embed/CHTo5rvn3Sw", frameborder="0", allowfullscreen)
       p #[strong Rondo Capriccioso, op 14]#[br]Felix Mendelssohn#[br]October 2016
