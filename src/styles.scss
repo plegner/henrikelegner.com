@@ -131,6 +131,11 @@ header {
     a:hover, a:focus { text-decoration: none; background: rgba($fg, 25%); }
   }
 
+  .metrostinato {
+    margin: 1em -14px 0; background: $fg; display: block; color: $bg; padding: 6px 14px; border-radius: 6px; font-size: 1.2em; transition: background .2s;
+    &:hover, &:focus { background: mix($fg, black); }
+  }
+
   @media screen and (max-width: 900px) { font-size: 16px; }
   @media screen and (max-width: 720px) { font-size: 14px; }
 
@@ -155,7 +160,8 @@ main {
   margin: 7.5rem auto 12rem;
   box-sizing: border-box;
   max-width: 720px;
-  &.wide { max-width: 880px; position: relative; }
+  position: relative;
+  &.wide { max-width: 880px; }
 
   h1 { font-size: 2.5rem; text-align: center; margin: 0 0 1em 0; color: $fg; }
   h2 { font-size: 1.5rem; border-bottom: 2px solid rgba($fg, 50%); padding-bottom: 0.3em; margin: 1.6em 0 0.8em; }
@@ -227,11 +233,11 @@ main {
   display: flex;
   gap: 2px;
   margin-bottom: 32px;
-  a { 
-    display: block; 
-    flex-grow: 1; 
-    text-align: center; 
-    background: rgba($fg, 20%); 
+  a {
+    display: block;
+    flex-grow: 1;
+    text-align: center;
+    background: rgba($fg, 20%);
     transition: background .2s;
     padding: 6px 0;
     &:hover, &:focus { background: rgba($fg, 40%) }
