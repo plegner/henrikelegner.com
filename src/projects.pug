@@ -1,0 +1,111 @@
+extends _layout.pug
+
+block vars
+  - var title = 'Henrike Legner – Projects'
+
+mixin item(a, b, c, d)
+  p #[strong= a]#[br]#[em= b]#[br]#{c}#[br]#{d}
+
+block content
+
+  h1 Projects
+
+  .tabs
+    a.active(href="#metrostinato") MetrOstinato
+    a(href="#abschluss") (NOT) Getting Married Today
+
+  .tab.active#metrostinato
+    //- a(href="/metrostinato-de" title="German Version" class="flag"): img(src="./images/de.png" alt="" width=36 height=36)
+
+    :markdown-it
+      **MetrOstinato**, a Project by Henrike Legner and [Ophelia Flassig](https://opheliaflassig.de/metrostinato/), combines aesthetic moments in everyday live with a scenic performance at an established cultural location.
+
+      It is a finalist in the HMTM's **XPLORE competition** for new concert formats. The selected students received a production budget of €3,000 to implement and perform their idea at a public final on 17 May 2024.
+
+    p: img(src="./images/metrostinato.jpg" width=600 height=380 style="margin: 0 auto;")
+
+    :markdown-it
+      In the first part, on **7 April**, baroque instruments and early music will be removed from their usual concert context and made tangible for the city population. At the U3 subway stations between Fürstenried West and Brudermühlstrasse, a historical Chaconne by Henry Purcell, The Fairy-Queen (1692), is being performed simultaneously and can be experienced as a musical safari as you drive past.
+
+      In the second part, on **17 May**, the sound world of the subway (metro) will be reflected in sound and images and set in a musical dialogue in the concert hall of the Reaktorhalle (Luisenstraße 37a 80333 Munich) that connects past and present.
+
+    //- .row
+      for img in [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+        .grow: img(src=`./gallery/metro-${img}.jpg`)
+
+    //- p Photos by Jakob Schad
+
+    //- iframe(src="https://hmtm.de/xplore-wettbewerb-finalistinnen-stehen-fest/embed/#?secret=fSPYzMXdld#?secret=hDU9DHSbMw" sandbox="allow-scripts" width="600" height="795" frameborder="0" style="display:block;margin:0 auto;max-width:100%;border-radius:6px")
+
+  .tab#abschluss
+    p: img(src="./images/abschluss.jpg" width=500 height=545 style="margin: 0 auto;")
+    h4 Abschlusskonzert des Master Operngesang der Theaterakademie August Everding#[br]12. Juli 2024, 19:00 Uhr, Prinzregententheater, München
+
+    +item('R.S.V.P.? … Definitely not coming',
+      '#Runawaybride',
+      'Getting Married Today',
+      'Arie der Amy aus „Company“, Stephen Sondheim')
+
+    +item('Sometimes, all it takes is one look to fall in love (or make a fool of yourself)',
+      '#FlirtAndFail',
+      'Aux langeurs d’Apollon',
+      'Arie der La Folie aus „Platée“, Jean-Philippe Rameau')
+
+    +item('Wait, awake already? We were just getting to the good part!',
+      '#PlayingWithFire',
+      'Oh sleep why dost thou leave me',
+      'Arie der Semele aus „Semele“, G.F. Handel')
+
+    +item('Love is like a game of chess. Except the queen has all the power',
+      '#WhoRunTheWorld',
+      'Da tempeste il legno infranto',
+      'Arie der Cleopatra aus „Giulio Cesare“, G.F. Handel')
+
+    +item('Flirting Workshop for beginners',
+      '#FlirtLikeAPro101',
+      'Kommt ein schlanker Bursch gegangen',
+      'Arie des Ännchen aus „Der Freischütz“, C. M. von Weber')
+
+    +item('As Eleanor Roosevelt once said: A woman is like a tea bag – you never know how strong she is until she gets in hot water',
+      '#Unstoppable',
+      'Scoglio d’immota fronte',
+      'Arie der Berenice aus „Scipione“, G.F. Handel')
+
+    +item('As Oscar Wilde once said: I can resist everything except',
+      '#Temptation',
+      'Là ci darem la mano',
+      'Duett der Zerlina und des Don Giovanni aus „Don Giovanni“, W.A. Mozart')
+
+    +item('Enough quotes. Meeting many men instead',
+      '#RegretRoundabout',
+      'Toothbrush Time, William Bolcom')
+
+    +item('The art of dealing with men, not because we want to, but because we have to',
+      '#ReluctantRomanceExpert',
+      'Una donna a quindici anni',
+      'Arie der Despina aus „Così fan tutte“, W.A. Mozart')
+
+    +item('Men play games, but women wrote the rulebook',
+      '#ThoughtItWasThatEasy?',
+      'Ständchen - Richard Strauss',
+      'Vergebliches Ständchen - Johannes Brahms')
+
+    +item('Maybe becoming a nun is the solution',
+      '#ContemplatingTheConvent',
+      'Die junge Nonne, Franz Schubert')
+
+    +item('Another song about women telling men what to do',
+      '#RowSleepLove',
+      'Guitare - Georges Bizet')
+
+    +item('Finally… Love is in the air? More like, love is in the hair, the clothes, the couch, the bed…',
+      '#Obsessed',
+      'O luce di quest’anima',
+      'Arie der Linda aus „Linda di Chamounix", Gaetano Donizetti')
+
+    +item('Ok… but he… he who makes me feel…',
+      '#AllTheButterflies',
+      'I feel pretty',
+      'Arie der Maria aus „West Side Story“, Leonard Bernstein')
+
+  script(src="./scripts.js")

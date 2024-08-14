@@ -1,7 +1,7 @@
 const tabs = {};
 let active;
 
-let current = 'gaensemagt';
+let current = document.querySelector('.tab.active')?.id;
 function load(href) {
   if (href === current) return;
   current = href;
