@@ -1,18 +1,18 @@
 extends _layout.pug
 
 block vars
-  - var title = 'Henrike Legner – Contact'
+  - var title = 'Henrike Legner – Kontakt'
 
 block content
-  h1 Contact
+  h1 Kontakt
 
-  p(style="text-align: center") For enquiries, please email Henrike at #[a(href="mailto:henrike@legner.com") henrike@legner.com], or fill in the form below:
+  p(style="text-align: center") Bei Anfragen bitte eine E-Mail an #[a(href="mailto:henrike@legner.com") henrike@legner.com] schicken, oder das folgende Formular ausfüllen:
 
   form(action="https://mathigon.org/form?id=henrike" method="post")
     label Name
       input(type="text" name="name" required autocomplete="name")
-    label Email
+    label E-Mail Adresse
       input(type="email" name="email" required autocomplete="email")
-    label Message
+    label Nachricht
       textarea(name="text" rows="6" required)
-    button(type="submit") Submit
+    button(type="submit") Abschicken

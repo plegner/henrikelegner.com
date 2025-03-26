@@ -1,0 +1,32 @@
+extends _layout.pug
+
+block vars
+  - var title = 'Henrike Legner – Biography'
+  - var mainClass = 'wide'
+
+block content
+  h1 Biography
+  a(href="/bio" title="German Version" class="flag"): img(src="./images/de.png" alt="" width=36 height=36)
+  .row.right
+    .grow.bio(style="line-height:1.6")
+      :markdown-it
+        Henrike Legner is a German soprano based in Munich, where she studies in the vocal class of KS Prof. **Christiane Iven** at the University of Music and Performing Arts.
+
+        Henrike completed the first three years of her bachelor's degree at Trinity Laban Conservatoire of Music and Dance in London, where she won the Collingwood Finalist Prize at the Kathleen Ferrier Society Bursary for young singers in 2016. After an Erasmus exchange, she remained in Padua, Italy, and graduated with distinction from the Conservatorio di Musica Cesare Pollini in 2019.
+
+        She participated in masterclasses with KS Brigitte Fassbaender, Emma Kirkby, KS Angelika Kirchschlager, Joan Patenaude-Yarnel and others.
+
+        As a soloist, Henrike performs with orchestras such as the WDR Funkhausorchester, Kammerorchester Stringendo, Philharmonisches Orchester Isartal, and Niederrheinisches Kammerorchester. Her concert repertoire includes “Exsultate jubilate” (Mozart), “Jauchzet Gott in allen Landen” (Bach), “Johannespassion” (Bach), “Weihnachtsoratorium” (Bach), “Matthäuspassion” (Bach), “Nulla in mundo pax sincera” (Vivaldi), “Messiah” (Handel), “Gloria” (Handel), and “Die Schöpfung” (Haydn).
+
+        Henrike is also passionate about art song and for this received important inspiration from the Udo Reinemann International Masterclass for Duos at La Monnaie in Brussels. She collaborates closely with pianist Gerold Huber, and together they recently gave recitals at the Richard Strauss Institute in Garmisch-Partenkirchen, the Allerheiligen Hofkirche in Munich and the Herzogsburg Dingolfing. In October 2024 they recorded a CD of songs by Mendelssohn.
+
+        Since 2021, Henrike has participated in several productions at the Theaterakademie August Everding, including Handel's "Ariodante" (Ginevra), Iris ter Shiphorst's "Die Gänsemagd" (Die Kammerjungfrau), and Cavalli's "Il Giasone" (Sole and Alinde). In March 2023, she performed the role of Nerea in Wolfgang-Andreas Schultz's "Achill unter den Mädchen" with the Münchner Rundfunkorchester at the Prinzregententheater.
+
+        January 2025, Henrike performed the role of Gretel in Humperdinck’s “Hänsel and Gretel” with the HSO München, conducted by Marcus Bosch.
+
+        Henrike has been generously supported by the arteMusica Foundation and the Richard Wagner Scholarship Foundation Munich. She has a great passion for ballet, modern dance, jazz and running. She is also fluent in German, English, and Italian. Her concert concept "MetrOstinato" was selected as a finalist in the **XPLORE competition for new concert formats**, with the final to take place in May 2024.
+
+    div
+      div(style="position: sticky; top: 90px")
+        img(src="./images/bio.jpg" width=280)
+        p.caption Photo by Adrienne Meister. Please do not use this text for concert programs, and #[a(href="mailto:henrike@legner.com") get in touch] for a shorter biography.
