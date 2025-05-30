@@ -8,24 +8,40 @@ block content
   h1 Kalender
 
   .tabs
-    a.active(href="#y2025") 2025
+    a.active(href="#upcoming") Kommend
+    a(href="#y2025") 2025
     a(href="#y2024") 2024
     a(href="#y2023") 2023
     a(href="#y2022") 2022
     a(href="#y2021") 2021
     a(href="#older") Älter
 
-  .tab.active#y2025
+  .tab.active#upcoming
+    .event
+      img(src="./images/hmt.jpg" width=80)
+      h3 Himmelfahrt! Chorkonzert
+      p.meta 30. Mai 2025, 19:30, St. Anna im Lehel, München
+      p Studierende der Gesangsklassen mit dem Hochschulchor und Kirchenmusik-Chor des Instituts für Historische Aufführungspraxis
+      p: a(href="https://hmtm.de/veranstaltungen/himmelfahrt/" target="_blank") Mehr Informationen
+    .event
+      img(src="./images/oberalteich.jpg" width=80)
+      h3 3. Konzert in der Reihe “Neue Töne”#[br]und 6. Abonnementkonzert
+      p.meta 29. Juni 2025, 19:30, Kulturforum Oberalteich
+      p Lieder und Instrumentalmusik der amerikanischen Moderne
+      p Henrike Legner, Sopran#[br]Svetosar Anatchkov, Violine#[br]Fritz Menzl , Viola#[br]Manfred Pferinger, Violoncello#[br]Utako Endo, Klavier#[br]Gerold Huber, Moderation und Klavier
+    .event
+      img(src="./images/elmau.jpg" width=80)
+      h3 Lied Festival Christian Gerhaher, Schloss Elmau
+      p.meta 7. Oktober 2025, 11:00, Schloss Elmau
+      p Lied matinee with young singers: Henrike Legner (soprano), Jakob Ewert (baritone), James Cheung (piano)
+      p: a(href="https://reservations.schloss-elmau.de/ShowCalendarEvents.aspx" target="_blank") Mehr Informationen
+
+  .tab#y2025
     .event
       img(src="./images/hmt.jpg" width=80)
       h3 Neujahrskonzert des HSO München
       p.meta 17. und 19. Januar 2025, 19:00 Uhr#[br]Großer Konzertsaal, Hochschule für Musik und Theater, München
       p Gretel in Hänsel und Gretel (Engelbert Humperdinck)#[br]Dirigent Marcus Bosch mit dem HSO München#[br]#[a(href="https://hmtm.de/veranstaltungen/neujahrskonzert-des-hso-muenchen-i/") Mehr Informationen…]
-    .event
-      img(src="./images/isartal.jpg" width=80)
-      h3 Konzert des Philharmonischen Orchesters Isartal
-      p.meta 5. April 2025, 19:30, Loisachhalle, 82515 Wolfratshausen
-      p Mit Sopranistinnen Henrike Legner und Viktoria Matt, Dirigent Henri Bonamy
     .event
       img(src="./images/henrike.jpg" width=80)
       h3 Liederabend mit Werken von Purcell, Schubert und Mendelssohn
@@ -33,11 +49,10 @@ block content
       p.meta 3. April 2025, LSE, London
       p Mit Pianist James Cheung
     .event
-      img(src="./images/oberalteich.jpg" width=80)
-      h3 3. Konzert in der Reihe “Neue Töne”#[br]und 6. Abonnementkonzert
-      p.meta 29. Juni 2025, 19:30, Kulturforum Oberalteich
-      p Lieder und Instrumentalmusik der amerikanischen Moderne
-      p Henrike Legner, Sopran#[br]Svetosar Anatchkov, Violine#[br]Fritz Menzl , Viola#[br]Manfred Pferinger, Violoncello#[br]Utako Endo, Klavier#[br]Gerold Huber, Moderation und Klavier
+      img(src="./images/isartal.jpg" width=80)
+      h3 Konzert des Philharmonischen Orchesters Isartal
+      p.meta 5. April 2025, 19:30, Loisachhalle, 82515 Wolfratshausen
+      p Mit Sopranistinnen Henrike Legner und Viktoria Matt, Dirigent Henri Bonamy
 
   .tab#y2024
     .event
