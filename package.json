@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "start": "parcel src/*.pug -p 5000 --open chrome",
+    "start": "parcel src/*.pug -p 5001 --open chrome",
     "build": "rm -rf dist && parcel build src/*.pug --no-source-maps && rm dist/_layout.html && cp src/CNAME dist && touch dist/.nojekyll",
     "deploy": "npm run build && push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },

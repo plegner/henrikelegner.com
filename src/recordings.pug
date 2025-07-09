@@ -1,18 +1,22 @@
 extends _layout.pug
 
 block vars
-  - var title = 'Henrike Legner – Recordings'
+  - var title = 'Henrike Legner – Aufnahmen'
 
 block content
-  h1 Recordings
+  h1 Aufnahmen
 
-  .row
-    //- .grow
+  .video-container
+    iframe(src="https://www.youtube.com/embed/JFB7KSgQ54I", frameborder="0", allowfullscreen)
+  p(style="margin-bottom: 24px") #[strong Ausschnitte aus Hänsel und Gretel], Humperdinck#[br]#[em Neujahrskonzert des HSO München, 17. Januar 2025, Großer Konzertsaal der HMTM, mit dem HSO München und Projektchor Hänsel und Gretel unter Leitung von Marcus Bosch]
+
+  //- .row
+    .grow
       .video-container
         iframe(src="https://www.youtube.com/embed/-bPbh7Mo__I", frameborder="0", allowfullscreen)
       p(style="margin-bottom: 24px") #[strong Una donna a quindici anni] (Despina, Così fan tutte), Mozart#[br]#[em Live recording AVO 2024, Theaterakademie August Everding, Pianist Nathan Harris]
 
-  .row
+  //- .row
     //- .grow
       .video-container
         iframe(src="https://www.youtube.com/embed/aaUvIMTPDpw", frameborder="0", allowfullscreen)
