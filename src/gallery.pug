@@ -11,7 +11,7 @@ block content
     a.active(href="#gaensemagt") Die Gänsemagd
     a(href="#ariodante") Ariodante
     a(href="#operette") Operetten Soiree
-    a(href="#poppea") L’Incoronazione di Poppea
+    //- a(href="#poppea") L’Incoronazione di Poppea
     a(href="#general") Weiteres
 
   .tab.active#gaensemagt
@@ -26,10 +26,10 @@ block content
 
   .tab#operette
     .row
-      for img in ['operette-1', 'operette-2', 'operette-3']
+      for img in ['operette-2', 'operette-3']
         .grow: img(src=`./gallery/${img}.jpg`)
 
-  .tab#poppea
+  //- .tab#poppea
     .row
       for img in ['poppea-1', 'poppea-2', 'poppea-3', 'poppea-4']
         .grow: img(src=`./gallery/${img}.jpg`)
@@ -37,11 +37,10 @@ block content
   .tab#general
     .row
       //- 'green-3', 'green-4', 'dark-1', 'dark-2'
-      for img in ['ascona-1', 'ascona-2', 'henrike-1', 'henrike-2', 'henrike-5', 'henrike-6', 'munich-1', 'munich-2']
+      for img in ['ascona-2', 'henrike-2', 'henrike-6', 'munich-1']
         .grow: img(src=`./gallery/${img}.jpg`)
-      .grow(style="width: 660px"): img(src="./gallery/eye-1.jpg")
       //- .grow(style="width: 660px"): img(src="./gallery/laurea.jpg")
       //- .grow: img(src="./gallery/black-1.jpg")
       //- .grow: img(src="./gallery/black-2.jpg")
-      .grow: img(src="./gallery/ballet.jpg")
-      .grow: img(src="./gallery/dance-2.jpg")
+      //- .grow: img(src="./gallery/ballet.jpg")
+      //- .grow: img(src="./gallery/dance-2.jpg")

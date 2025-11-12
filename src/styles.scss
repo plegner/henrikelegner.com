@@ -129,6 +129,7 @@ header {
     width: 350px;
     height: 80px;
     margin: 0 auto;
+    margin-bottom: 1.2em;
     .cover { float: left; margin-right: 12px; }
     .tag { position: absolute; top: -10px; right: 10px; background: $fg;
       color: white; padding: 0 6px; border-radius: 6px; font-size: 12px; }
@@ -139,9 +140,9 @@ header {
 
   p.quote {
     line-height: 1.4;
-    margin: 1em -8px 0; font-style: italic; font-size: 1.2em; text-indent: -6px; max-width: 325px;
+    margin: 0.3em -8px 0; font-style: italic; font-size: 1.2em; text-indent: -6px; max-width: 325px;
     span { font-size: 70%; display: block; text-indent: 0; margin-top: 0.2em; }
-    a { padding: 6px 14px; border-radius: 6px; display: block; transition: background .2s; }
+    a { padding: 6px 14px; border-radius: 8px; display: block; transition: background .2s; }
     a:hover, a:focus { text-decoration: none; background: rgba($fg, 15%); }
   }
 

@@ -3,12 +3,21 @@ extends _layout.pug
 block vars
   - var title = 'Henrike Legner – Aufnahmen'
 
+mixin video(url, title, composer, subtitle)
+  .grow&attributes(attributes)
+    .video-container
+      iframe(src=`https://www.youtube.com/embed/${url}`, frameborder="0", allowfullscreen)
+    p(style="margin-bottom: 24px") #[strong #{title}], #{composer}#[br]#[em #{subtitle}]
+
 block content
   h1 Aufnahmen
 
-  .video-container
-    iframe(src="https://www.youtube.com/embed/JFB7KSgQ54I", frameborder="0", allowfullscreen)
-  p(style="margin-bottom: 24px") #[strong Ausschnitte aus Hänsel und Gretel], Humperdinck#[br]#[em Neujahrskonzert des HSO München, 17. Januar 2025, Großer Konzertsaal der HMTM, mit dem HSO München und Projektchor Hänsel und Gretel unter Leitung von Marcus Bosch]
+  .row
+    +video('JFB7KSgQ54I', 'Ausschnitte aus Hänsel und Gretel', 'Humperdinck', 'Neujahrskonzert des HSO München, 17. Januar 2025, Großer Konzertsaal der HMTM, mit dem HSO München und Projektchor Hänsel und Gretel unter Leitung von Marcus Bosch')(style='width:380px')
+    +video('TDL86EfejIk', 'Da tempeste il legno infranto', 'Giulio Cesare, G.F. Handel', '')
+    +video('jGxEj5NVPLM', 'Perdonate, signor mio', 'Il Matrimonio segreto, Cimarosa', '')
+    +video('XH7GrqyMcd4', 'Raste Krieger, Krieg ist aus', 'Felix Mendelssohn', 'Henrike Legner, Gerold Huber')
+    +video('mXrv2xrP7AI', 'Schilflied aus 6 Lieder', 'Felix Mendelssohn', 'Henrike Legner, Gerold Huber')
 
   //- .row
     .grow
