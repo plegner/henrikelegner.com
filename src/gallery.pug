@@ -8,39 +8,29 @@ block content
   h1 Galerie
 
   .tabs
-    a.active(href="#gaensemagt") Die Gänsemagd
-    a(href="#ariodante") Ariodante
-    a(href="#operette") Operetten Soiree
-    //- a(href="#poppea") L’Incoronazione di Poppea
-    a(href="#general") Weiteres
+    a.active(href="#allgemein") Allgemein
+    a(href="#lied") Lied
+    a(href="#konzert") Konzert
+    a(href="#oper") Oper
 
-  .tab.active#gaensemagt
-    .row
-      for img in ['gans-11', 'gans-9', 'gans-1', 'gans-2', 'gans-5', 'gans-4', 'gans-10', 'gans-8']
-        .grow: img(src=`./gallery/${img}.jpg`)
+  style .row div { width: 408px; align-self: center; }
 
-  .tab#ariodante
+  .tab.active#allgemein
     .row
-      for img in ['ariodante-1', 'ariodante-2', 'ariodante-3']
-        .grow: img(src=`./gallery/${img}.jpg`)
+      for img in ['cd-1', 'cd-2', 'cd-3', 'ascona', 'shoot-1', 'shoot-2', 'shoot-3']
+        div: img(src=`./gallery1/${img}.jpg` width=408)
 
-  .tab#operette
+  .tab#lied
     .row
-      for img in ['operette-2', 'operette-3']
-        .grow: img(src=`./gallery/${img}.jpg`)
+      for img in ['launch-1', 'launch-2', 'launch-3', 'launch-4', 'london', 'james']
+        div: img(src=`./gallery1/${img}.jpg` width=408)
 
-  //- .tab#poppea
+  .tab#konzert
     .row
-      for img in ['poppea-1', 'poppea-2', 'poppea-3', 'poppea-4']
-        .grow: img(src=`./gallery/${img}.jpg`)
+      for img in ['isartal-1', 'isartal-2', 'gretel','konzert-2', 'konzert-1']
+        div: img(src=`./gallery1/${img}.jpg` width=408)
 
-  .tab#general
+  .tab#oper
     .row
-      //- 'green-3', 'green-4', 'dark-1', 'dark-2'
-      for img in ['ascona-2', 'henrike-2', 'henrike-6', 'munich-1']
-        .grow: img(src=`./gallery/${img}.jpg`)
-      //- .grow(style="width: 660px"): img(src="./gallery/laurea.jpg")
-      //- .grow: img(src="./gallery/black-1.jpg")
-      //- .grow: img(src="./gallery/black-2.jpg")
-      //- .grow: img(src="./gallery/ballet.jpg")
-      //- .grow: img(src="./gallery/dance-2.jpg")
+      for img in ['ariodante-1', 'ariodante-2', 'gans-1', 'gans-3', 'gans-4', 'gans-6', 'gans-2', 'gans-5']
+        div: img(src=`./gallery1/${img}.jpg` width=408)
