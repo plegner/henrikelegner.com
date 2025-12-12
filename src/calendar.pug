@@ -8,43 +8,17 @@ block content
   h1 Kalender
 
   .tabs
-    a.active(href="#upcoming") Kommend
-    a(href="#y2025") 2025
+    //- a.active(href="#upcoming") Kommend
+    a.active(href="#y2025") 2025
     a(href="#y2024") 2024
     a(href="#y2023") 2023
     a(href="#y2022") 2022
     a(href="#y2021") 2021
     a(href="#older") Älter
 
-  .tab.active#upcoming
-    .event
-      img(src="./images/elmau.jpg" width=80)
-      h3 Lied Festival Christian Gerhaher, Schloss Elmau
-      p.meta 7. Oktober 2025, 11:00, Schloss Elmau
-      p Lied matinee with young singers: Henrike Legner (soprano), Jakob Ewert (baritone), James Cheung (piano). #[a(href="https://reservations.schloss-elmau.de/ShowCalendarEvents.aspx" target="_blank") Mehr Informationen]
-    .event
-      img(src="./images/cd.jpg" width=80)
-      h3 CD Release Konzert – Von der Liebe Zaubermacht
-      p.meta 21. Oktober 2025, 19:30, Allerheiligen Hofkirche München
-      p Henrike Legner, Sopran • Gerold Huber, Klavier#[br]#[a(href="https://www.muenchenticket.de/event/liederabend-von-der-liebe-zaubermacht-lieder-von-mendelsohn-britten-previn-und-poulenc-34512/?srsltid=AfmBOoqCAPhl3ENhYVhU0hZLhXBJD_IpGyPWQ5X7csRCwhaFE6hobRJd" target="_blank") Tickets]
-    .event
-      img(src="./images/bergson.jpg" width=80)
-      h3 Mozart Requiem, Sopran Solo
-      p.meta 1.November 2025, 19:00 • 2.November 2025, 16:00 und 19:00
-      p.meta Bergson Kunstkraftwerk
-      p Mit Bergson Phil’ und Bergson Voices
-      p: a(href="https://bergson.com/event/mozart-requiem" target="_blank") Mehr Informationen
-    .event
-      img(src="./images/traunstein.jpg" width=80)
-      h3 Brahms Requiem, Sopran Solo
-      p.meta 8. November 2025, 19:00, Auferstehungskirche, Traunstein
-    .event
-      img(src="./images/gasteig1.jpg" width=80)
-      h3 Matthäuspassion
-      p.meta 16. November 2025, 19:00, Isarphilarmonie, München
-      p: a(href="https://www.muenchenticket.de/event/johann-sebastian-bach-matthaeus-passion-32528/" target="_blank") Mehr Informationen
+  //- .tab.active#upcoming
 
-  .tab#y2025
+  .tab.active#y2025
     .event
       img(src="./images/hmt.jpg" width=80)
       h3 Neujahrskonzert des HSO München
@@ -73,6 +47,32 @@ block content
       p.meta 29. Juni 2025, 19:30, Kulturforum Oberalteich
       p Lieder und Instrumentalmusik der amerikanischen Moderne
       p Henrike Legner, Sopran#[br]Svetosar Anatchkov, Violine#[br]Fritz Menzl , Viola#[br]Manfred Pferinger, Violoncello#[br]Utako Endo, Klavier#[br]Gerold Huber, Moderation und Klavier
+    .event
+      img(src="./images/elmau.jpg" width=80)
+      h3 Lied Festival Christian Gerhaher, Schloss Elmau
+      p.meta 7. Oktober 2025, 11:00, Schloss Elmau
+      p Lied matinee with young singers: Henrike Legner (soprano), Jakob Ewert (baritone), James Cheung (piano). #[a(href="https://reservations.schloss-elmau.de/ShowCalendarEvents.aspx" target="_blank") Mehr Informationen]
+    .event
+      img(src="./images/cd.jpg" width=80)
+      h3 CD Release Konzert – Von der Liebe Zaubermacht
+      p.meta 21. Oktober 2025, 19:30, Allerheiligen Hofkirche München
+      p Henrike Legner, Sopran • Gerold Huber, Klavier#[br]#[a(href="https://www.muenchenticket.de/event/liederabend-von-der-liebe-zaubermacht-lieder-von-mendelsohn-britten-previn-und-poulenc-34512/?srsltid=AfmBOoqCAPhl3ENhYVhU0hZLhXBJD_IpGyPWQ5X7csRCwhaFE6hobRJd" target="_blank") Tickets]
+    .event
+      img(src="./images/bergson.jpg" width=80)
+      h3 Mozart Requiem, Sopran Solo
+      p.meta 1.November 2025, 19:00 • 2.November 2025, 16:00 und 19:00
+      p.meta Bergson Kunstkraftwerk
+      p Mit Bergson Phil’ und Bergson Voices
+      p: a(href="https://bergson.com/event/mozart-requiem" target="_blank") Mehr Informationen
+    .event
+      img(src="./images/traunstein.jpg" width=80)
+      h3 Brahms Requiem, Sopran Solo
+      p.meta 8. November 2025, 19:00, Auferstehungskirche, Traunstein
+    .event
+      img(src="./images/gasteig1.jpg" width=80)
+      h3 Matthäuspassion
+      p.meta 16. November 2025, 19:00, Isarphilarmonie, München
+      p: a(href="https://www.muenchenticket.de/event/johann-sebastian-bach-matthaeus-passion-32528/" target="_blank") Mehr Informationen
 
   .tab#y2024
     .event
