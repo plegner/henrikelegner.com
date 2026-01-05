@@ -119,23 +119,24 @@ header {
   .text-wrap { width: fit-content; }
   h1 { text-transform: uppercase; margin: 0; font-size: 3.3em; line-height: 1; }
   h1 img { display: inline-block; }
-  .subtitle { display: block; font-size: 50%; opacity: 0.5; margin: 0.5em 0 2.5em; }
+  .subtitle { display: block; font-size: 50%; opacity: 0.5; margin: 0.5em 0 2em; }
 
   .cd {
     background: rgba(white, 80%);
     border-radius: 8px;
     padding: 12px;
     position: relative;
-    width: 350px;
-    height: 80px;
     margin: 0 auto;
     margin-bottom: 1.2em;
-    .cover { float: left; margin-right: 12px; }
+    text-align: center;
+    .images { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; }
+    .images img { border-radius: 4px; }
+
     .tag { position: absolute; top: -10px; right: 10px; background: $fg;
       color: white; padding: 0 6px; border-radius: 6px; font-size: 12px; }
-    h2 { margin: 0; font-size: 1.2em; line-height: 1.2; }
+    h2 { margin: 0; font-size: 1.25em; line-height: 1.2; }
     p { margin: 0; font-size: 13px; }
-    a.btn { float: left; margin: 4px 6px 0 0; }
+    .links { display: flex; gap: 6px; margin-top: 8px; justify-content: center; }
   }
 
   p.quote {
