@@ -147,15 +147,22 @@ header {
     a:hover, a:focus { text-decoration: none; background: rgba($fg, 15%); }
   }
 
+  @media screen and (min-height: 721px) and (max-height: 850px) {
+    .cd .images img { width: 70px; height: 70px; }
+    .cd .links img { width: 25px; height: 25px; }
+    p.quote { font-size: 1em; }
+  }
+
   @media screen and (max-width: 900px) { font-size: 16px; }
   // @media screen and (max-width: 720px) { font-size: 14px; }
 
-  @media screen and (max-width: 780px) {
+  @media screen and (max-width: 780px), screen and (max-height: 720px) {
     margin-top: 52px;
     font-size: 18px;
     height: auto;
     max-height: none;
-    .image { position: static; height: 0; padding-bottom: 100%; background-position: 0 15%; background-size: cover; }
+    .cd { width: fit-content; }
+    .image { position: static; aspect-ratio: 1/1; background-position: 0 15%; background-size: cover; max-height: 60vh; }
     .text { position: static; display: block; margin: 1.3em 0 3em; }
     .text-wrap { width: auto; text-align: center; }
     .subtitle { margin-bottom: 2em; }
