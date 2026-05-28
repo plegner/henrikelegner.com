@@ -40,11 +40,11 @@ header {
   .nav-dropdown { display: none; }
   .nav-body { display: flex; }
 
-  @media (max-width: 860px) {
+  @media (max-width: 940px) {
     a { padding: 10px 8px; }
   }
 
-  @media (max-width: 740px) {
+  @media (max-width: 800px) {
     padding: 0;
     justify-content: space-between;
     a { padding: 10px 24px; }
@@ -122,26 +122,32 @@ header {
   .subtitle { display: block; font-size: 50%; opacity: 0.5; margin: 0.5em 0 2em; }
 
   .cd {
-    background: rgba(white, 80%);
-    border-radius: 8px;
-    padding: 12px;
-    position: relative;
+    display: flex;
     margin: 0 auto;
     margin-bottom: 1.2em;
-    text-align: center;
-    .images { display: flex; justify-content: center; gap: 8px; margin-bottom: 8px; }
-    .images img { border-radius: 4px; }
+    background: rgba(white, 50%);
+    border-radius: 8px;
+    transition: background .2s;
+    &:hover, &:focus { background: rgba(white, 80%); }
+
+    img { border-radius: 8px 0 0 8px; }
+    .body {
+      position: relative;
+      border-radius: 0 8px 8px 0;
+      padding: 6px 8px 0 12px;
+      flex-grow: 1;
+    }
 
     .tag { position: absolute; top: -10px; right: 10px; background: $fg;
       color: white; padding: 0 6px; border-radius: 6px; font-size: 12px; }
-    h2 { margin: 0; font-size: 1.25em; line-height: 1.2; }
+    h2 { margin: 0; font-size: 1.2em; }
     p { margin: 0; font-size: 13px; }
     .links { display: flex; gap: 6px; margin-top: 8px; justify-content: center; }
   }
 
   p.quote {
     line-height: 1.4;
-    margin: 0.3em -8px 0; font-style: italic; font-size: 1.2em; text-indent: -6px; max-width: 325px;
+    margin: 0.3em -8px 0; font-style: italic; font-size: 1.2em; text-indent: -6px; max-width: 450px;
     span { font-size: 70%; display: block; text-indent: 0; margin-top: 0.2em; }
     a { padding: 6px 14px; border-radius: 8px; display: block; transition: background .2s; }
     a:hover, a:focus { text-decoration: none; background: rgba($fg, 15%); }
@@ -190,6 +196,13 @@ main {
 
   p a { color: #0071bd; }
   p a:focus, p a:hover { text-decoration: underline; }
+}
+
+.cd-links {
+  display: flex;
+  gap: 12px;
+  margin: 1.5em 0;
+  justify-content: center;
 }
 
 .flag {

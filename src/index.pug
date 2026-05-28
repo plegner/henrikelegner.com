@@ -15,26 +15,13 @@ block hero
         br
         span.subtitle: img(alt="Soprano" src="./svg/soprano1.svg" style="width:4.81em")
 
-      .cd
-        .tag Neu
-        .images
-          img(alt="CD Cover" src="./images/cd.jpg" width=90 height=90)
-          img(src="./images/schallplattenpreis.jpg" width=90 height=90)
-        h2 Von der Liebe Zaubermacht
-        p Henrike Legner, Sopran • Gerold Huber, Klavier
-        .links
-          a.btn(href="https://www.amazon.de/dp/B0FN76QGGP" target="_blank" title="Amazon")
-            img(src="./images/amazon.png" width=30 height=30)
-          a.btn(href="https://www.genuin.de/_new/cd_1.php?cd=GEN25946" target="_blank" title="Genuin")
-            img(src="./images/genuin.png" width=30 height=30)
-          a.btn(href="https://open.spotify.com/artist/0XqSowxKRF1SIldBa4NNRV" target="_blank" title="Spotify")
-            img(src="./images/spotify.png" width=30 height=30)
-          a.btn(href="https://classical.music.apple.com/de/album/1832427558" target="_blank" title="Apple Music")
-            img(src="./images/apple.png" width=30 height=30)
-          a.btn(href="https://www.youtube.com/playlist?list=OLAK5uy_neSwYZjNILEI4GsuU7bIxm4f8q35r89OY" target="_blank" title="YouTube")
-            img(src="./images/youtube.png" width=30 height=30)
-          a.btn(href="https://music.amazon.com/albums/B0FL4P7HK9" target="_blank" title="Amazon Music")
-            img(src="./images/amazon-music.jpg" width=30 height=30)
+      a.cd(href="/cd")
+        img(alt="CD Cover" src="./images/cd.jpg" width=90 height=90)
+        .body
+          .tag Neu
+          h2 Von der Liebe Zaubermacht
+          p Henrike Legner, Sopran • Gerold Huber, Klavier
+          p Nominiert für den Preis der Deutschen Schallplattenkritik
 
       p.quote: a(href="https://www.br.de/mediathek/podcast/klassik-aktuell/interview-mit-henrike-legner/2111493" target="_blank")
         | “Unbedingt reinhören!”
@@ -42,6 +29,9 @@ block hero
       p.quote: a(href="https://www.sueddeutsche.de/muenchen/bayerische-theaterakademie-musikhochschule-muenchen-haendel-ariodante-kritik-1.5570915" target="_blank")
         | “Eine Verheißung fürs Barockfach.”
         span – Süddeutsche Zeitung
+      p.quote: a(href="./images/fono-forum.pdf" target="_blank")
+        | “Barockglänzend, sakralbrillant, mädchenhaft klar […]. Ein großes Talent.”
+        span – Fono Forum
       p.quote: a(href="https://www.sueddeutsche.de/muenchen/achill-unter-den-maedchen-oper-kritik-prinzregententheater-wolfgang-andreas-schultz-1.5771375" target="_blank")
         | “Sie füllt ihre Koloratursopran-Partie mit großer Flexibilität und Virtuosität ganz lupenrein aus.”
         span – Süddeutsche Zeitung

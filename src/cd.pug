@@ -1,0 +1,34 @@
+extends _layout.pug
+
+block vars
+  - var title = 'Henrike Legner – Von der Liebe Zaubermacht'
+  - var mainClass = 'wide'
+
+block content
+  h1 Von der Liebe Zaubermacht CD
+  .row
+    div
+      div(style="position: sticky; top: 90px")
+        img(alt="CD Cover" src="./images/cd.jpg" width=280 height=280)
+        .cd-links
+          a.btn(href="https://www.amazon.de/dp/B0FN76QGGP" target="_blank" title="Amazon")
+            img(src="./images/amazon.png" width=40 height=40)
+          //- a.btn(href="https://www.genuin.de/_new/cd_1.php?cd=GEN25946" target="_blank" title="Genuin")
+            img(src="./images/genuin.png" width=30 height=30)
+          a.btn(href="https://open.spotify.com/artist/0XqSowxKRF1SIldBa4NNRV" target="_blank" title="Spotify")
+            img(src="./images/spotify.png" width=40 height=40)
+          a.btn(href="https://classical.music.apple.com/de/album/1832427558" target="_blank" title="Apple Music")
+            img(src="./images/apple.png" width=40 height=40)
+          a.btn(href="https://www.youtube.com/playlist?list=OLAK5uy_neSwYZjNILEI4GsuU7bIxm4f8q35r89OY" target="_blank" title="YouTube")
+            img(src="./images/youtube.png" width=40 height=40)
+          a.btn(href="https://music.amazon.com/albums/B0FL4P7HK9" target="_blank" title="Amazon Music")
+            img(src="./images/amazon-music.jpg" width=40 height=40)
+
+    .grow
+      p Henrike Legner präsentiert ihr Debütalbum bei #[a(href="https://www.genuinclassics.com/gen25946-von-der-liebe-zaubermacht-love-s-magic-power" target="_blank") GENUIN Classics], mit einem außergewöhnlichen Repertoire romantischer Lieder, deren kleine Schätze immer wieder aufs Neue begeistern: Ausgewählte Lieder von Felix Mendelssohn, darunter die schönsten aus seinem Nachlass, sind auf diesem Album vereint.
+
+      p
+        img(alt="Schallplattenpreis" src="./images/schallplattenpreis.jpg" width=100 height=100 style="float: right;margin-left:12px")
+        | Das Album wurde für den Preis der Deutschen Schallplattenkritik in der Kategorie #[em Klassisches Lied und Vokalrecital] nominiert, und steht auf der #[a(href="https://www.schallplattenkritik.de/bestenlisten/longlist/longlist-12026" target="_blank") aktuellen Longlist 1/2026].
+
+      p Johannes Schmitz schreibt in #[a(href="./images/fono-forum.pdf") Fono Forum]: #[em „Barockglänzend, sakralbrillant, mädchenhaft klar singt Henrike Legner diese erzromantischen Lieder. Mit kontrollierter Zurückhaltung, musizierend, nicht rezitierend. Aber schon mit innerer Weite, lebendigen Spannungsbögen, kluger Phrasierung und dem Mut, die Stimme weit zurückzunehmen, wo es die Musik stärker macht. Ein großes Talent, dessen sich auch Gerold Huber angenommen hat, der die junge Sängerin hier begleitet.“]
